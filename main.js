@@ -2,7 +2,8 @@ let settings = document.getElementById("difficulty");
 let contenitore = document.getElementById("board");
 function play(){
     contenitore.innerHTML = "";
-    
+    const risultato = document.getElementById("score");
+    risultato.textContent = 0;
         for (let i = 1; i<= settings.value; i++){
             let boxItem = document.createElement("div");
             contenitore.append(boxItem)
@@ -24,7 +25,7 @@ function play(){
 
 
         const activeElements = document.querySelectorAll(".item");
-        const risultato = document.getElementById("score");
+        
         let gameScore = 0;
         for (let i = 0; i < activeElements.length; i++) {
             activeElements[i].addEventListener("click", function() {

@@ -25,6 +25,7 @@ header{
 .leftSide{
     display: flex;
     align-items: center;
+    font-size: 1.2rem;
 }
 
 label,
@@ -73,4 +74,13 @@ footer{
     align-items: center;
     padding: 2em;
     font-weight: bold;
+}
+
+.middle{
+    font-weight: bold;
+    background-color: #001533;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
 }
