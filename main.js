@@ -24,15 +24,18 @@ function play(){
 
 
         const activeElements = document.querySelectorAll(".item");
-        
+        const risultato = document.getElementById("score");
+        let gameScore = 0;
         for (let i = 0; i < activeElements.length; i++) {
             activeElements[i].addEventListener("click", function() {
                 if(arrayRandom.includes(parseInt(this.textContent))){
                     this.classList.toggle("bomb");
-                setTimeout(() => { alert('you lost!');contenitore.innerHTML = ""; }, 500);
+                setTimeout(() => { alert(`game over, your score is ${gameScore}`);contenitore.innerHTML = ""; }, 500);
                 } else {
                     this.classList.toggle("active");
-                }
+                    gameScore++;
+                    risultato.textContent = gameScore;
+                } 
             });
         }
 }
