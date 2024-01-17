@@ -22,12 +22,12 @@ function play(){
           }
           console.log(arrayRandom);
 
-          
+
         const activeElements = document.querySelectorAll(".item");
         
-        for (let i = 0; i < activeElements.length; i++) {
+        for (let i = 1; i < activeElements.length; i++) {
             activeElements[i].addEventListener("click", function() {
-                if(arrayRandom.includes(i+1)){
+                if(arrayRandom.includes(parseInt(this.textContent))){
                     this.classList.toggle("bomb");
                 setTimeout(() => { alert('you lost!');contenitore.innerHTML = ""; }, 1000);
                 } else {
