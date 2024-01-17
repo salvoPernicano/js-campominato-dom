@@ -38,6 +38,9 @@ function play(){
                     risultato.textContent = gameScore;
                 } 
             });
+            if (gameScore === settings.value -16){
+                alert("you won!");
+            }
         }
 }
 
