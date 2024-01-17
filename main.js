@@ -29,7 +29,7 @@ function play(){
             activeElements[i].addEventListener("click", function() {
                 if(arrayRandom.includes(parseInt(this.textContent))){
                     this.classList.toggle("bomb");
-                setTimeout(() => { alert('you lost!');contenitore.innerHTML = ""; }, 1000);
+                setTimeout(() => { alert('you lost!');contenitore.innerHTML = ""; }, 500);
                 } else {
                     this.classList.toggle("active");
                 }
