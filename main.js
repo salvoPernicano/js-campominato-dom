@@ -36,11 +36,11 @@ function play(){
                     this.classList.toggle("active");
                     gameScore++;
                     risultato.textContent = gameScore;
+                    if (gameScore === settings.value -16){
+                        alert("you won!");
+                    }
                 } 
             });
-            if (gameScore === settings.value -16){
-                alert("you won!");
-            }
         }
 }
 
