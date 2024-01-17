@@ -25,7 +25,7 @@ function play(){
 
         const activeElements = document.querySelectorAll(".item");
         
-        for (let i = 1; i < activeElements.length; i++) {
+        for (let i = 0; i < activeElements.length; i++) {
             activeElements[i].addEventListener("click", function() {
                 if(arrayRandom.includes(parseInt(this.textContent))){
                     this.classList.toggle("bomb");
