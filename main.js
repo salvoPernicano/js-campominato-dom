@@ -12,13 +12,27 @@ function play(){
                 "flex-basis", `calc(100% / ${Math.sqrt(settings.value)})`
             )
         }
-   
+        const arrayRandom = [];
+
+        while(arrayRandom.length<16){
+              let randomNumber = Math.floor(Math.random()* settings.value +1);
+              if (!arrayRandom.includes(randomNumber)){
+                  arrayRandom.push(randomNumber);
+              }
+          }
+          console.log(arrayRandom);
+
+          
         const activeElements = document.querySelectorAll(".item");
         
         for (let i = 0; i < activeElements.length; i++) {
             activeElements[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                console.log(i +1)
+                if(arrayRandom.includes(i+1)){
+                    this.classList.toggle("bomb");
+                setTimeout(() => { alert('you lost!');contenitore.innerHTML = ""; }, 1000);
+                } else {
+                    this.classList.toggle("active");
+                }
             });
         }
 }

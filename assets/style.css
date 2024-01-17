@@ -59,6 +59,10 @@ main{
 }
 
 .item.active {
+    background-color: rgb(18, 21, 214);
+    color: white;
+}
+.item.bomb{
     background-color: red;
     color: white;
 }
